@@ -81,3 +81,51 @@ Tablo, müşterilerin genel konaklama tercihlerini özetlemektedir. Analizden el
 3.   **Hostel, Villa ve Resort Tercihleri:** Hostel, villa ve resort gibi diğer konaklama türleri de müşteriler arasında belirli bir sıklıkta tercih edilmektedir. Ancak, bu tercihler genel frekans tablosunda otel ve Airbnb tercihlerinin gerisinde kalmaktadır.
 
 Bu analiz, seyahat acentemizin müşteri kitlesi içindeki konaklama tercihlerini daha iyi anlamamıza yardımcı olacaktır. Müşterilerin genel tercihlerini anlamak, gelecekteki seyahat programları ve tur paketleri oluştururken daha etkili kararlar almamıza katkı sağlayacaktır.
+## Q6 : Veri analizi
+
+Bu rapor, müşterilerin konaklama tercihleri üzerine yapılan analizleri içermektedir. Analizler, veri setinde bulunan konaklama tercihlerine dayanmaktadır.Veri setinde yer alan "Accommodation.type" sütununu incelediğimizde, toplam müşteri sayısının büyük bir kısmının otel konaklamasını tercih ettiğini gözlemledik. Frekans tablosu ve çubuk grafik aşağıda sunulmuştur:
+
+```{r  echo=FALSE, message=FALSE, warning=FALSE}
+chooseCRANmirror(ind=49)
+library(dplyr)
+library(tidyverse)
+
+konaklama_tercihleri_tablo <- veri %>% group_by(Accommodation.type) %>% summarise(Frequency = n())
+
+library(ggplot2)
+ggplot(konaklama_tercihleri_tablo, aes(x = reorder(Accommodation.type, -Frequency), y = Frequency)) +
+  geom_bar(stat = "identity", fill = "red") +
+  labs(title = "Konaklama Tercihleri Frekansları", x = "Konaklama Tercihi", y = "Frekans")
+
+
+otel_sonrasi_airbnb <- veri %>%
+  filter(Accommodation.type %in% c("Airbnb")) %>%
+  summarise(Frequency = n())
+
+
+otel_sonrasi_diger_tercihler <- veri %>%
+  filter(Accommodation.type %in% c("Hostel", "Villa", "Resort")) %>%
+  group_by(Accommodation.type) %>%
+  summarise(Frequency = n())
+
+
+en_az_tercih_edilen_villa <- konaklama_tercihleri_tablo %>%
+  filter(Accommodation.type == "Villa") %>%
+  select(Frequency)
+
+otel_sonrasi_airbnb_orani <- (otel_sonrasi_airbnb$Frequency / sum(otel_sonrasi_diger_tercihler$Frequency)) * 100
+cat("Otel sonrası Airbnb tercih eden müşteri oranı:", round(otel_sonrasi_airbnb_orani, 2), "%\n")
+cat("En az tercih edilen villa sayısı:", en_az_tercih_edilen_villa$Frequency)
+```
+
+Konaklama tercihlerinin frekans tablosu ve çubuk grafik üzerinden yapılan incelemede, müşterilerin en çok otel tercih ettiği görülmektedir. Airbnb, hostel, villa ve resort tercihleri de bulunmaktadır.
+
+**Otel Sonrası Airbnb Tercih Oranı:** Otel sonrası Airbnb tercih eden müşteri oranı hesaplanmıştır. Analiz sonuçlarına göre, müşterilerin %71.43'ü otelden sonra Airbnb tercih etmektedir.
+
+**En Az Tercih Edilen Villa:** Konaklama tercihleri arasında en az tercih edilen villa belirlenmiştir. Analiz sonuçlarına göre, müşterilerin toplamda 4 defa villa tercihi yaptığı gözlemlenmiştir.
+
+**Tavsiyeler ve İyileştirmeler:**
+
+-   Airbnb tercih oranının artırılması için özel kampanyalar veya indirimler düzenlenebilir.
+
+-   En az tercih edilen villa için müşteri geri bildirimleri toplanarak iyileştirmeler yapılabilir.
