@@ -63,3 +63,21 @@ veri <- na.omit(veri)
 ```
 
 Verisetimizde değiştirilmesi gereken başka bir değer olmadığı için bu kadarı yeterlidir.
+## Q5 : Veri mühendisliği
+
+Bu analiz, seyahat acentemizin müşterilerinin konaklama tercihlerini daha iyi anlamak için gerçekleştirilmiştir. Aşağıdaki frekans tablosu, müşterilerin hangi konaklama türlerini ne sıklıkta tercih ettiğini göstermektedir:
+
+```{r  echo=FALSE, message=FALSE, warning=FALSE}
+barplot(table(veri$`Accommodation.type`), main = "Yolcuların Konaklama Tercihleri", xlab = "Konaklama Türleri", ylab = "Frekans", col = "skyblue", border = "black")
+
+```
+
+Tablo, müşterilerin genel konaklama tercihlerini özetlemektedir. Analizden elde edilen ana bulgular şunlardır:
+
+1.  **Otel Tercihi:** Müşterilerin büyük bir çoğunluğu konaklama tercihini otelden yana kullanmaktadır. Otel, genel tercihler içinde en yüksek frekans değerine sahiptir.
+
+2.  **Airbnb Tercihi:** Müşteriler arasında Airbnb tercih eden bir grup bulunmaktadır. Bu tercih, özellikle otel dışında farklı bir konaklama deneyimi arayan müşteriler tarafından tercih edilmektedir.
+
+3.   **Hostel, Villa ve Resort Tercihleri:** Hostel, villa ve resort gibi diğer konaklama türleri de müşteriler arasında belirli bir sıklıkta tercih edilmektedir. Ancak, bu tercihler genel frekans tablosunda otel ve Airbnb tercihlerinin gerisinde kalmaktadır.
+
+Bu analiz, seyahat acentemizin müşteri kitlesi içindeki konaklama tercihlerini daha iyi anlamamıza yardımcı olacaktır. Müşterilerin genel tercihlerini anlamak, gelecekteki seyahat programları ve tur paketleri oluştururken daha etkili kararlar almamıza katkı sağlayacaktır.
