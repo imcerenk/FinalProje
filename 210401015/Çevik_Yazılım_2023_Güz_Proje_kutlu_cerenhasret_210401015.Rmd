@@ -54,3 +54,12 @@ Veri setinde **Destination** sütunundaki destinasyonların frekanslarını içe
 destination_table <- table(veri$Destination)
 barplot(destination_table, main="Destinasyon Dağılımı", xlab="Destination", ylab="Frekans")
 ```
+## Q4 : Veri seti ön işlemesi
+
+Veride sütundaki eksik değerleri, o sütunun mod (en sık tekrar eden değer) değeri ile doldurduk.
+
+```{r}
+veri <- na.omit(veri)
+```
+
+Verisetimizde değiştirilmesi gereken başka bir değer olmadığı için bu kadarı yeterlidir.
