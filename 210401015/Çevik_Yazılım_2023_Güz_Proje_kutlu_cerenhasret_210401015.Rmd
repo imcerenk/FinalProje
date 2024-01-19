@@ -129,3 +129,16 @@ Konaklama tercihlerinin frekans tablosu ve çubuk grafik üzerinden yapılan inc
 -   Airbnb tercih oranının artırılması için özel kampanyalar veya indirimler düzenlenebilir.
 
 -   En az tercih edilen villa için müşteri geri bildirimleri toplanarak iyileştirmeler yapılabilir.
+## Q7 : Sonuç değerlendirme, tavsiyeler
+
+**Geçerlilik ve Mantıklılık:** Proje kapsamında gerçekleştirilen operasyonlar ve elde edilen sonuçlar, başlangıçtaki hedeflere uygun olarak yürütülmüş ve elde edilen bulgular mantıklı bir çerçevede değerlendirilmiştir.
+
+**Ana Problemin Çözümüne Katkı:** Analizlerin ve operasyonların proje başlığı altındaki ana problemin çözümüne katkı sağladığı gözlemlenmiştir. Elde edilen sonuçlar, seyahat acentesinin müşteri taleplerini daha iyi anlamasına ve özel tur programları oluşturmasına yardımcı olacak veri içgörülerini sunmuştur.
+
+**Müşteri Kullanımı:** Elde edilen sonuçlar, seyahat acentesi müşterileri için özel tur programları oluştururken hedef kitleye daha uygun ve çekici seçenekler sunmak için kullanılabilir. Müşteri tercihleri ve talepleri daha iyi anlaşıldığı için müşteri memnuniyetini artırmak adına kullanılabilir.
+
+**Analizin Kuvvetleri ve Zayıflıkları:** Analizin kuvvetleri, doğru veri ön işleme adımları ve derinlemesine keşif analizleriyle öne çıkmaktadır. Ancak, bazı durumlarda eksik veya hatalı verilerin tam olarak düzeltilmemiş olması gibi zayıflıklar gözlemlenmiştir. Bu durum, analiz sonuçlarını etkileyebilir.
+
+**Gelecekteki İyileştirmeler ve Tavsiyeler:** Veri temizleme ve ön işleme adımlarında daha fazla detay ve hassasiyet eklenmelidir. Müşteri memnuniyetini artırmak adına daha fazla müşteri geri bildirimi ve anket verisi kullanılabilir. Analiz sonuçları daha fazla görselleştirilerek kullanıcı dostu bir raporlama arayüzü oluşturulabilir. Daha fazla müşteri segmentasyonu ve kişiselleştirilmiş önerilerin geliştirilmesi üzerine çalışılmalıdır.
+
+**Sonuçlar ve Tavsiyeler:** Proje, başlangıçtaki hedeflere ulaşmada başarılı olmuştur. Ancak, sürekli iyileştirmeler ve güncellemeler ile daha etkili hale getirilebilir. Müşterilere daha özelleştirilmiş hizmetler sunmak ve veri analizi süreçlerini optimize etmek için yapılan operasyonlar, seyahat acentesinin rekabet avantajını artırmaya yönelik önemli bir adım olmuştur. Gelecekte, daha geniş veri setleri ve gelişmiş analiz teknikleriyle projenin kapsamını genişletme potansiyeli bulunmaktadır.
