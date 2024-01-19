@@ -19,3 +19,38 @@ Bu projede, seyahat acentesi olarak yeni kurulan işletmenin müşteri odaklı h
 Ayrıca, projede konaklama tercihlerini içeren sayısal veri üzerinde tahminleme modelleri uygulanacaktır. Bu modeller, gelecekteki konaklama eğilimlerini öngörmek için kullanılacak ve iş stratejilerini bu verilere göre optimize etmek mümkün olacaktır. Elde edilen sonuçlar, seyahat acentesinin popüler destinasyonları daha etkili bir şekilde belirlemesine, müşteri memnuniyetini artırmasına ve rekabet avantajı sağlamasına olanak tanıyacaktır.
 
 Sonuç olarak, bu projede [Kaggle dataseti](https://www.kaggle.com/datasets/rkiattisak/traveler-trip-data/data) kullanılarak seyahat acentesinin iş stratejilerini veri odaklı bir şekilde şekillendirmesine yardımcı olacak. Müşteri taleplerini doğru anlamak ve gelecekteki seyahat eğilimlerini öngörmek, işletmenin sürdürülebilir büyüme sağlaması ve müşteri memnuniyetini en üst düzeye çıkarması açısından kritik öneme sahiptir.
+## Q3 : Veri seti keşifsel analizi
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(readr)
+path <- file.path("Travel details dataset.csv")
+myDF <- readr::read_csv(path)
+```
+
+Veri seti Kaggle web sitesinden indirilmiştir ve **readr::read_csv()** fonksiyonu kullanılarak **`r class(myDF)[[1]]`** tipinde bir değişkene ithal edilmiştir. Veri boyutları aşağıdaki gibidir :
+
+-   Satır sayısı : `r nrow(myDF)`
+-   Sütun sayısı : `r ncol(myDF)`
+
+Veri setinin ön görsellemesi aşağıda verilmiştir.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+myDF
+```
+
+Veri setimizdeki eksik verileri kontrol etmek için R programını kullanabiliriz. Aşağıdaki tabloyu kullanarak her sütundaki eksik veri sayısını görebiliriz:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+veri <- read.csv("Travel details dataset.csv")
+sapply(veri, function(x) sum(is.na(x)))
+
+```
+
+*Eksik verilerin hangi sütunlarda olduğunu belirledikten sonra, bu boşlukları doldurmanın uygun stratejilerini geliştirebiliriz. Örneğin, sayısal bir sütundaki eksik değerleri o sütunun ortalaması ile doldurabilir veya kategorik bir sütundaki eksik değerleri mod değeri ile doldurabiliriz.*
+
+Veri setinde **Destination** sütunundaki destinasyonların frekanslarını içeren bir tablo ve grafik oluşturarak başlayabiliriz. Bu analiz, hangi ülkelerin müşterilerimiz arasında daha popüler olduğunu belirlememize yardımcı olacaktır. Hangi destinasyonların daha sık tercih edildiğini gözlemleyerek, bu ülkelerdeki turistik cazibe noktalarını, konaklama seçeneklerini ve diğer detayları daha yakından inceleyebiliriz.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+destination_table <- table(veri$Destination)
+barplot(destination_table, main="Destinasyon Dağılımı", xlab="Destination", ylab="Frekans")
+```
