@@ -1,0 +1,12 @@
+---
+title: 'Proje Rapor : Ceren Hasret Kutlu 210401015'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Q1 : Problem Tanımı
+
+Yeni seyahat acentesi, müşteri memnuniyetini ve talepleri anlamak için veri analizi ve tahminleme modellerini kullanmayı planlıyor. Müşteri tercihleri ve seyahat alışkanlıklarını analiz ederek özel tur programları oluşturmayı hedefliyor.
