@@ -10,3 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Q1 : Problem Tanımı
 
 Yeni seyahat acentesi, müşteri memnuniyetini ve talepleri anlamak için veri analizi ve tahminleme modellerini kullanmayı planlıyor. Müşteri tercihleri ve seyahat alışkanlıklarını analiz ederek özel tur programları oluşturmayı hedefliyor.
+
+
+## Q2 : Proje amacı
+
+Bu projede, seyahat acentesi olarak yeni kurulan işletmenin müşteri odaklı hizmet sunma kapasitesini artırmayı hedeflemekteyiz. Veri analizi için [Kaggle dataseti](https://www.kaggle.com/datasets/rkiattisak/traveler-trip-data/data) kullanılacak ve turistlerin tercih ettiği destinasyonlar, konaklama seçenekleri ve seyahat tarih aralıkları belirlenecektir. Bu analiz, müşteri beklentilerini daha iyi anlamamıza ve özel, kişiselleştirilmiş seyahat programları oluşturmamıza yardımcı olacaktır.
+
+Ayrıca, projede konaklama tercihlerini içeren sayısal veri üzerinde tahminleme modelleri uygulanacaktır. Bu modeller, gelecekteki konaklama eğilimlerini öngörmek için kullanılacak ve iş stratejilerini bu verilere göre optimize etmek mümkün olacaktır. Elde edilen sonuçlar, seyahat acentesinin popüler destinasyonları daha etkili bir şekilde belirlemesine, müşteri memnuniyetini artırmasına ve rekabet avantajı sağlamasına olanak tanıyacaktır.
+
+Sonuç olarak, bu projede [Kaggle dataseti](https://www.kaggle.com/datasets/rkiattisak/traveler-trip-data/data) kullanılarak seyahat acentesinin iş stratejilerini veri odaklı bir şekilde şekillendirmesine yardımcı olacak. Müşteri taleplerini doğru anlamak ve gelecekteki seyahat eğilimlerini öngörmek, işletmenin sürdürülebilir büyüme sağlaması ve müşteri memnuniyetini en üst düzeye çıkarması açısından kritik öneme sahiptir.
